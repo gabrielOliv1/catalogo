@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/icon.png"/>
+    <link rel="stylesheet" href="/css/style.css">
+     <title><%= titulo %></title>
+</head>
+<nav>
+    <article>
+        <a href="/"><img src="/img/icon.png" width="50" height="50"></a>
+    </article>
+    
+    <article>
+        <a href="/">Home</a>
+        <a href="/cadastrar">Cadastro</a>
+        <a href="/editar">Editar</a>
+        <a href="/deletar">Deletar</a>
+    </article>
+</nav>
+
+<h1>Catálago!!!</h1>
+
+<div>
+    <h1><%= lista[id].nome %> <%= lista[id].ano %></h1>
+</div>
+<div id="detalhes">
+<div>
+    <img src=<%=lista[id].imagem %> width="400" height="400"></img>
+</div>
+<div id="caixa">    
+    <li>Marca: <%=  lista[id].marca%></li>
+    <li>Descrição:  <%= lista[id].descricao%></li>
+    
+</div> </div>
+
+
+<body>
+    
+</body>
+</html>

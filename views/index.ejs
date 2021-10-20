@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" href="./img/icon.png"/>
-    <title><%= titulo %></title>
+    <title>Carros</title>
 </head>
 
 <body>
@@ -17,9 +17,7 @@
         
         <article>
             <a href="/">Home</a>
-            <a href="/cadastrar">Cadastro</a>
-            <a href="/editar">Editar</a>
-            <a href="/deletar">Deletar</a>
+            <a href="/cadastrar">Cadastro</a>            
         </article>
     </nav>
     <% if(mensagem != "") {  %>
@@ -31,12 +29,13 @@
 
     <div id="divindex">
                
-        <h2><% lista.forEach(item => { %>
-        <a href="/detalhes/<%= item.index%>">
+        <h2><% carros.forEach(item => { %>
+        <a href="/detalhes/<%= item.id%>">
         <img src=<%=item.imagem %> width="300" height="300"></img>
         <li><%= item.marca %></li>
         <li><%= item.nome %></li></a>
         <% }) %> </h2>
+
     
     </div>
     <script src="/js/script.js"></script>

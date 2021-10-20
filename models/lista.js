@@ -1,4 +1,5 @@
 const database = require("./../database");
+const Sequelize = require("sequelize");
 
 const Lista = database.define("lista", {
   id: {

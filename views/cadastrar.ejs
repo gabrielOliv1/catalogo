@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./img/icon.png"/>
     <link rel="stylesheet" href="/css/style.css">
-    <title><%= titulo %></title>
+    <title>Cadastro</title>
 </head>
 <nav>
     <article>
@@ -15,15 +15,13 @@
     
     <article>
         <a href="/">Home</a>
-        <a href="/cadastrar">Cadastro</a>
-        <a href="/editar">Editar</a>
-        <a href="/deletar">Deletar</a>
+        <a href="/cadastrar">Cadastro</a>        
     </article>
 </nav>
 
-<h1>Catálago!!!</h1>
+<h1>Cadastro</h1>
 
-<form action="/new" method="POST">
+<form action="/cadastrar" method="POST">
     <div>
         <label for="nome">Nome: </label>
         <input type="text" name="nome" id="nome" placeholder="Digite o nome" required="">
@@ -42,7 +40,7 @@
     </div>
     <div>
         <label for="descricao">Descrição: </label>
-        <input type="descricao" name="descricao" id="descricao" placeholder="Digite a descrição" required="">
+        <input type="descricao" name="descricao" id="descricao" placeholder="Digite a descrição" >
     </div>
     
          

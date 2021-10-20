@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" href="./img/icon.png"/>
 
-    <title><%= titulo %></title>
+    <title>Excluir</title>
 </head>
 <nav>
     <article>
@@ -16,15 +16,25 @@
     
     <article>
         <a href="/">Home</a>
-        <a href="/cadastrar">Cadastro</a>
-        <a href="/editar">Editar</a>
-        <a href="/deletar">Deletar</a>
+        <a href="/cadastrar">Cadastro</a>        
     </article>
 </nav>
 
-<h1>Catálago!!!</h1>
+<h1>Deseja realmente excluir <%=carros.marca%> <%=carros.nome%>??</h1>
+
+<div id="botoes">
+    <div>
+        <form action="/deletar/<%=carros.id %>" method="POST"> 
+            <button type="submit">Excluir</button>
+        </form>
+    </div>
+    <div>
+        <button> <a href="/detalhes/<%=carros.id%>">Voltar</a> </button>
+    </div>
 
 
+
+</div>
 <body>
     
 </body>

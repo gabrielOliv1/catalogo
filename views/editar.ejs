@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" href="./img/icon.png"/>
 
-    <title><%= titulo %></title>
+    <title>Editar</title>
 </head>
 <nav>
     <article>
@@ -16,13 +16,35 @@
     
     <article>
         <a href="/">Home</a>
-        <a href="/cadastrar">Cadastro</a>
-        <a href="/editar">Editar</a>
-        <a href="/deletar">Deletar</a>
+        <a href="/cadastrar">Cadastro</a>        
     </article>
 </nav>
 
-<h1>Catálago!!!</h1>
+<h1>Editar Carro</h1>
+
+<form action="/editar/<%=carros.id %>" method="POST">
+    <div>
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome" placeholder="Digite o nome" required="" value = <%=carros.nome%>>
+    </div>
+    <div>
+        <label for="marca">Marca: </label>
+        <input type="text" name="marca" id="marca" placeholder="Digite a marca" required="" value = <%=carros.marca%>>
+    </div>
+    <div>
+        <label for="ano">Ano: </label>
+        <input type="text" name="ano" id="ano" placeholder="Digite o ano" required="" value = <%=carros.ano%>>
+    </div>
+    <div>
+        <label for="imagem">Imagem: </label>
+        <input type="imagem" name="imagem" id="imagem" placeholder="Digite o link da imagem" required="" value = <%=carros.imagem%>>
+    </div>
+    <div>
+        <label for="descricao">Descrição: </label>
+        <input type="descricao" name="descricao" id="descricao" placeholder="Digite a descrição"  value = <%=carros.descricao%>>
+    </div>
+    <button type="submit">Editar</button>
+</form>
 
 
 <body>

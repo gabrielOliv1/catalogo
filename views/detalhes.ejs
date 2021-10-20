@@ -15,26 +15,30 @@
     
     <article>
         <a href="/">Home</a>
-        <a href="/cadastrar">Cadastro</a>
-        <a href="/editar">Editar</a>
-        <a href="/deletar">Deletar</a>
+        <a href="/cadastrar">Cadastro</a>        
     </article>
 </nav>
 
-<h1>Catálago!!!</h1>
-
 <div>
-    <h1><%= lista[id].nome %> <%= lista[id].ano %></h1>
+    <h1><%= carros.nome %> - <%= carros.ano %></h1>
 </div>
 <div id="detalhes">
 <div>
-    <img src=<%=lista[id].imagem %> width="400" height="400"></img>
+    <img src=<%=carros.imagem %> width="400" height="400"></img>
 </div>
 <div id="caixa">    
-    <li>Marca: <%=  lista[id].marca%></li>
-    <li>Descrição:  <%= lista[id].descricao%></li>
-    
-</div> </div>
+    <li>Marca : <%=carros.marca%></li>
+    <li>Descrição :  <%= carros.descricao%></li>
+</div> 
+</div>
+<div id="botoes">
+    <div>
+        <button type="submit"><a href="/editar/<%=carros.id%>">Editar</a></button>
+    </div>
+    <div>
+        <button type="submit"><a href="/deletar/<%=carros.id%>">Excluir</a></button>
+    </div>
+</div>
 
 
 <body>
